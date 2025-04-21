@@ -78,8 +78,6 @@ Swagger docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 PYTHONPATH=. pytest
 ```
 
-Or use the optional `test.sh` if created.
-
 ---
 
 ## 📬 API Endpoints
