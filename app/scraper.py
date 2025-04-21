@@ -8,8 +8,8 @@ async def fetch(session, url):
     async with session.get(url) as response:
         html = await response.text()
         soup = BeautifulSoup(html, 'html.parser')
-        titles = soup.select('a.storylink')
-        return [title.text for title in titles]
+        titles = [tag.text for tag in soup.select('.titleline > a')]
+        return titles
     
 async def scrape():
     async with aiohttp.ClientSession() as session:
